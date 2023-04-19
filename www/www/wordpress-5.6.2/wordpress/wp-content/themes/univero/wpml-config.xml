@@ -1,0 +1,8 @@
+<wpml-config>
+    <custom-types>
+        <custom-type translate="1">ninzio_brand</custom-type>
+        <custom-type translate="1">ninzio_footer</custom-type>
+        <custom-type translate="1">ninzio_megamenu</custom-type>
+        <custom-type translate="1">ninzio_testimonial</custom-type>
+    </custom-types>
+</wpml-config>

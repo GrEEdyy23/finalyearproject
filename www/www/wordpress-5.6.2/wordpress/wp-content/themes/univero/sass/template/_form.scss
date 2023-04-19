@@ -1,0 +1,615 @@
+// btn
+button,.btn{
+	@include transition(all 0.3s ease-in-out 0s);
+	&:hover,&:focus{
+		outline: none !important;
+	}
+}
+.btn-outline-light{
+  @include button-variant-outline( #FFFFFF !important, transparent,  #FFFFFF !important, $brand-primary, #FFFFFF !important, $brand-primary);
+}
+
+.btn-outline{
+	@include button-outline(default, #fff !important, $theme-color);
+	@include button-outline(primary, $brand-primary, #fff !important);
+	@include button-outline(success, $brand-success, #FFFFFF !important);
+	@include button-outline(info, $brand-info, #FFFFFF !important);
+	@include button-outline(danger, $brand-danger, #FFFFFF !important);
+	@include button-outline(warning, $brand-warning, #FFFFFF !important);
+}
+.btn-inverse{
+	@include button-inverse(primary, #fff !important, $theme-color-second ,$theme-color-second);
+	@include button-inverse(success, $brand-success, #FFFFFF !important);
+	@include button-inverse(info, $brand-info, #FFFFFF !important);
+	@include button-inverse(danger, $brand-danger, #FFFFFF !important);
+	@include button-inverse(warning, $brand-warning, #FFFFFF !important);
+	@include button-inverse(theme, $theme-color, #FFFFFF !important);
+}
+.btn-dark-double{
+	font-size:13px;
+	font-weight:600;
+	color: #999999;
+	border:2px solid #4b4d4e;
+	@include border-radius(2px);
+	padding:10px 15px;
+	background:transparent;
+	&:hover,&:active{
+		background: $brand-primary;
+		color: rgba(255,255,255,0.7);
+		border-color:darken($brand-primary,5%);
+	}
+}
+.btn.btn-dark{
+	border:1px solid $border-color !important;
+	background:#eeeeee !important;
+	color: #888888 !important;
+	&:hover,&:active{
+		background:darken($border-color,5%) !important;
+		border-color:darken($border-color,5%) !important;
+	}
+}
+.btn-sm{
+	font-weight: 500;
+}
+.btn-border2x{
+	border-width:2px;
+}
+.btn.btn-lighten{
+	border-color:#fff !important;
+	color:#fff !important;
+	background: transparent;
+	&:hover{
+		color: #fff !important;
+		background: transparent;
+		border-color:#fff !important;
+	}
+}
+.btn.btn-white{
+	background: #fff !important;
+	color: $link-color;
+	border-color: #fff !important;
+	&:hover{
+		color: $link-color;
+		background: #FFFFFF !important;
+		border-color: #FFFFFF !important;
+	}
+}
+.btn-link-dark{
+	color: $link-color !important;
+	font-size:18px !important;
+	text-transform:inherit !important;
+	line-height:1.1 !important;
+}
+.btn-reverse{
+	background:transparent;
+	font-weight:400;
+	text-transform:capitalize;
+	&:hover,&:active,&:focus{
+		color: #fff !important;
+		background: $theme-color;
+	}
+	i{
+		font-size:$font-size-base;
+		@include rtl-margin-right(8px);
+		vertical-align: text-top;
+	}
+}
+.btn-gray{
+	background:#eeeeee;
+	color:#969696;
+	&:hover,&:active{
+		background:#cccccc;
+		color:#616161;
+	}
+}
+.btn-pink{
+	@include button-variant(#fff !important, #e3a3a2, #e3a3a2);
+}
+.btn-3d{
+	@include button-3d(lg,0, -5px, rgba(0, 0, 0, 0.15));
+	@include button-3d(empty,0, -5px, rgba(0, 0, 0, 0.15));
+	@include button-3d(sm,0, -4px, rgba(0, 0, 0, 0.15));
+	@include button-3d(xs,0, -2px, rgba(0, 0, 0, 0.15));
+}
+.btn-shadow{
+	@include button-3d(empty,0, -15px, rgba(0, 0, 0, 0.3),15px,-10px);
+}
+.btn-theme {
+  @include button-variant(#fff !important, $theme-color, $theme-color);
+}
+.btn-dark{
+	@include button-variant(#fff !important,#616161, #616161);
+}
+.btn-theme-color-second{
+	background: $theme-color-second !important;
+	&:hover,&:active{
+		background: darken($theme-color-second, 8%) !important;
+	}
+}
+.btn-theme-second {
+  @include button-variant(#fff !important, $theme-color-second, $theme-color-second);
+}
+.btn-theme.btn-outline{
+	color: $link-color;
+	border-color: $theme-color;
+	background: #fff !important;
+	&:hover,&:active{
+		color: #fff !important;
+		background: $theme-color;
+		border-color: $theme-color;
+	}
+}
+.more-link{
+	display: inline-block;
+	margin: 30px 0px 0px 0px;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #FFFFFF;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 2px solid transparent;
+	background-color: $theme-color;
+	white-space: nowrap;
+	text-transform: uppercase;
+	letter-spacing: 1px;	
+	@include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base - 4, $line-height-base, $border-radius-base - 4);
+	@include user-select(none);
+	@include box-shadow(none);
+	@include transition(all .4s ease 0s);		
+    &:hover,
+    &:focus,
+    &:active{
+    	text-decoration: none;
+    	color: #FFFFFF;
+    	background-color: $theme-color;
+    }    
+}
+/* Search
+------------------------------------------------*/
+.search-popup{
+	.dropdown-menu{
+		padding: 10px;
+	}
+}
+.btn-action{
+	@include border-radius(4px);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 900;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    @include transition(all 0.4s ease 0s);
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.searchform{
+	.input-search{
+		padding:15px;
+		@include rtl-border-right(0);
+		line-height: 1.5;
+	}
+	.btn-search{
+		vertical-align: top;
+		color: #adafac;
+		padding:12px $padding-xs-horizontal;
+	}
+	.input-group-btn{
+		line-height: 100%;
+	}
+}
+.ninzio-search{
+	height: 48px;
+	@include rtl-padding-right(55px);
+	.button-search{
+		display: block;
+		margin-top: 1px;
+		font-size: 16px;
+		color: $gray-text;
+		&:hover{
+			color: $gray-text !important;
+		}
+	}
+}
+// Search categories
+.search-category{
+	.btn{
+		@include rtl-margin-left(10px !important);
+		@include border-radius($border-radius-small !important );
+	}
+	.wpo-search-inner{
+		label.form-control{
+			border:none;
+			border-bottom-right-radius: $border-radius-small;
+	        border-top-right-radius: $border-radius-small;
+		}
+	}
+	select {
+		border:none;
+		text-transform: capitalize;
+		font-weight: 500;
+	}
+}
+
+/* comment form
+------------------------------------------------*/
+.chosen-container{
+	width: 100% !important;
+}
+
+.input-group-form{
+	@include border-radius(3px);
+	background: $input-group-form-bg;
+	margin: $input-group-form-margin;
+	.form-control-reversed{
+		border: 0px;
+		background: $input-form-bg;
+		color: darken($white, 20%);
+	    @include font-size(font-size,14px);
+	    height: 34px;
+	    &:hover,
+	    &:focus{
+	        @include box-shadow(none);
+	    }
+	}
+	.input-group-addon{
+        border: 0;
+        background: $input-form-bg;
+        @include border-left-radius(4px);
+    }
+}
+.woocommerce #review_form #respond p{
+	margin:20px 0 0;
+}
+#review_form{
+	.comment-form{
+		label{		    		    
+		    margin: 0;	
+  			font-size: $font-size-base;
+  			font-weight: $font-weight-base;  			
+  			color: $gray-text;
+		}
+		> p,
+		> div{
+			margin-top: 20px;
+			&:first-child{
+				margin:0;
+			}
+			input, textarea{
+				width: 100%;
+			}
+		}
+		@media(min-width:1024px){
+			> p,
+			> div{
+				display: table;
+				width: 100%;
+				> *{
+					display: table-cell;
+					vertical-align: top;
+					padding-top:10px;
+				}
+				label{
+					width: 150px;
+				}
+				input{
+					width: 100%;
+				}
+			}
+			.you-rating{
+				width: 150px;
+				@include rtl-float-left();
+			}
+			.comment-form-rating{
+				overflow: hidden;
+			}
+			.form-submit{
+				@include rtl-padding-left(150px);
+			}
+		}
+		input{
+			height: 45px;
+		}		
+		input, textarea {
+			padding: 10px 15px;
+			height: 45px;
+			font-family: $font-family-three;
+			font-size: 16px;
+			color: #a4a4a4;
+			border: 1px solid $border-color;
+			@include border-radius(0px);
+			@include box-shadow(none);
+			@include transition(border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out);				
+			@include placeholder {
+	            color:#a4a4a4;
+	            @include opacity(1);
+	        }
+			&:focus{						
+				border-color:$theme-color;
+				@include box-shadow(inset 0 0 0 1px $theme-color);				
+			}
+		}
+		textarea{			
+			height: 120px !important;
+		}
+		input#submit{	
+			@include border-radius(0px);
+			font-family: $btn-font-family;
+  			font-weight: $btn-font-weight;
+			background: #c8cace !important;			
+			text-transform: uppercase;
+			color: #fff !important;
+			display: inline-block;
+			padding: 12px 50px;		
+			width: auto;	
+			border:none;
+			height: 46px;
+			letter-spacing: 1px;
+			font-size: 12px;			
+			@include transition(all 0.2s ease-in-out 0s);			
+			&:hover,&:active,&:focus{
+				color: #fff !important;
+				background: darken(#c8cace, 5%) !important;
+			}
+		}
+	}
+}
+#reviews{
+    #comments{
+        margin: 0 0 60px;
+        padding: 0;
+        .woocommerce-noreviews{
+        	margin: 20px 0;
+        }
+        .title-tab{        	
+			border-top: 1px solid $border-color;
+			margin-bottom: 50px;
+			margin-top: 50px;
+			padding-top: 35px;
+        }
+    }
+    .commentlist{
+        padding: 0;
+    }
+	.reviews-summary {
+		.review-summary-total{
+			text-align: center;
+			font-weight: 400;
+			.review-summary-result {
+				@include size(70px, 70px);
+				text-align: center;
+				border: 2px solid $theme-color;
+				color: $theme-color;
+				line-height: 66px;
+				font-size: 20px;
+				@include border-radius(50%);
+				margin-bottom: 8px;
+			}
+		}
+		.review-summary-detal {
+			overflow: hidden;
+			display: block;
+			.review-label{
+				color: $black;
+				font-weight: 400;
+			}
+			.progress {
+			}
+		}
+	}
+	.comments{
+		padding: $theme-padding 0;
+		.commentlist {
+			margin: 15px 0;
+			.comment {
+				margin-bottom: 30px;
+			}
+			.comment-image {
+				min-width: 100px;
+				@include rtl-margin-right(20px);
+				> span {
+					display:  block;
+					margin-bottom: 5px;
+				}
+				.avatar {
+					@include border-radius(50%);
+				}
+				.author {
+					color: $black;
+				}
+			}
+			.comment-text {
+				border: 1px solid $border-color;
+				padding:  15px 30px;
+				@include border-radius( 3px);
+				> div {
+					margin-bottom: 7px;
+				}
+			}
+		}
+	}
+	.review_form_wrapper {
+		border-top: 1px solid $border-color;
+	}
+	.comment-reply-title{
+		font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        padding-top: 30px;
+        border-top: 1px solid $border-color;
+        line-height: 28px;
+        text-transform: uppercase;
+        color: $gray-text;
+        margin: 0 0 30px !important;        
+	}
+    .title-info{
+		font-size: 16px;
+        font-weight: 600;
+        margin:0 0 5px !important;
+        font-family: $font-family-second;
+	}
+    .title-info{
+        margin: 0 0 20px !important;
+    }
+    .average-value{
+        font-size: 30px;
+        font-weight: 700;
+        color: $link-color;
+        line-height: 1.2;
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            display: block;
+        }
+    }
+}
+// contact form 7
+
+.wpcf7-form{
+	span.wpcf7-not-valid-tip{
+		margin-bottom: 12px;
+	}
+	textarea.form-control{
+		height: 160px;
+		resize: none;
+	}
+	.submit{		
+		text-align: left !important;
+	}
+	.wpcf7-submit{
+		background: #c8cace !important;
+		border-color: #c8cace !important;
+		&:hover{
+			background: #c8cace !important;
+			border-color: #c8cace !important;
+		}
+	}
+	.form-control{
+		color: #a4a4a4;
+		margin: 0 0 20px;
+		height: 45px;
+		background: #F9F9F9;
+		border:1px solid $border-color;
+		@include border-radius(0);
+		@include box-shadow(none);		
+		@include transition(border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out);				
+		@include placeholder {
+            color:#a4a4a4;
+            @include opacity(1);
+        }
+		&:focus{						
+			border-color:$theme-color;
+			@include box-shadow(inset 0 0 0 1px $theme-color);				
+		}		
+	}
+}
+
+.widget-search-form{
+	padding: 56px 120px;	
+	@include desktop{
+		padding: 40px;
+	}
+	@include tablet-large{
+		padding: 35px;
+	}
+	@include tablet{
+		padding: 30px;
+	}
+	@include tablet-small{
+		padding: 25px;
+	}	
+	@include mobile{
+		padding: 20px;
+	}
+	.left-search{
+		@include flexbox();
+		@include flex-wrap(wrap);
+		@include align-items(center);		
+	}
+	.search-form-item{
+		max-width: 29%;				
+		@include flex(0 0 29%);
+		@include rtl-margin-right(20px);	      
+		&.submit{
+			@include flex(0 0 50px);
+		}
+		@include desktop{
+			margin-bottom: 10px;
+			@include rtl-margin-right(10px);
+			&:last-child{
+				@include rtl-margin-right(0px);
+			}
+		}
+		@include tablet-large{
+			margin-bottom: 10px;
+			@include rtl-margin-right(10px);
+		}
+		@include tablet{
+			margin-bottom: 10px;
+			@include rtl-margin-right(20px);
+		}
+		@include tablet-small{
+			float: none !important;
+			margin-bottom: 10px;
+			@include flex(0 0 100%);
+			max-width: 100%;
+			@include rtl-margin-right(0px);
+		}
+		@include mobile{
+			float: none !important;
+			margin-bottom: 10px;
+			@include flex(0 0 100%);
+			max-width: 100%;
+			@include rtl-margin-right(0px);
+		}
+		&:last-child{
+			margin: 0;
+		}
+	}
+	.input_search,select{
+		border: 0px;
+		padding: 8px 23px;
+		height: 47px;
+		color:#a4a4a4;
+		min-width: 269px;		
+		@include placeholder {
+            color:#a4a4a4;
+            @include opacity(1);
+        }
+	}
+	.btn{
+		padding: 0;
+		font-size: 16px;
+		text-align: center;
+		border: 2px solid #FFFFFF !important;
+		@include size(51px,47px);
+		background: transparent !important;
+		&:hover,
+		&:active,
+		&:focus{
+			border-color: #FFFFFF !important;
+		}
+	}
+}
+
+.btn.btn-theme{
+	&:hover,
+	&:focus,
+	&:active{
+		color: #FFFFFF !important;
+	}
+}
+select{
+	border: 1px solid $border-color;
+	height: 43px;
+	padding: 5px 15px;
+	font-weight: 400;
+	font-size: 14px;
+	font-family: $font-family-three;
+}

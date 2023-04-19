@@ -1,0 +1,128 @@
+body {
+    background-color: #3e2723
+}
+
+article {
+    background-color: #f5eed6 !important;
+    margin: auto;
+    max-width: 75%;
+    border-radius: 25px;
+    padding: 2em 4em
+}
+
+article h1 a{
+font-size: 1.25em
+}
+
+p,
+li,
+pre.wp-block-code,
+article a,
+.ocean_cream_info{
+    font-size: calc(14px + 0.25vw);
+    line-height: 150%;
+    font-family: "Nimbus Sans", Helvetica, Arial, sans;
+    color: #333
+}
+
+nav.menu {
+    display: block;
+    margin: auto;
+    padding: 0;
+    overflow: auto;
+    background-color: #d2bc83;
+}
+
+nav.menu li {
+    float: left;
+    list-style-type: none
+}
+
+nav.menu li a {
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #000
+}
+
+nav.menu li a:hover {
+    background-color: #2a91d1;
+}
+
+/* Submenus */
+nav.menu ul ul {
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: #d2bc83;
+    border-top: 2px solid
+}
+
+nav.menu ul li:hover>ul {
+    display: block
+}
+
+#ocean_cream_mobile_menu_icon {
+    display: none
+}
+
+@media screen and (max-width:999px) {
+    nav.menu li {
+        width: 100%;
+        float: none;
+        padding: 0
+    }
+
+    #ocean_cream_sidebar_open {
+        display: none
+    }
+
+    #ocean_cream_mobile_menu {
+        display: none
+    }
+
+    #ocean_cream_mobile_menu_icon {
+        display: inline-block;
+        width: 100%;
+        color: #fff
+    }
+
+    article {
+        max-width: 95%;
+        margin: auto;
+        border-radius: 0;
+        padding: 5px 10px 3em
+    }
+	
+	q {
+		padding: 0 !important
+	}
+}
+
+#ocean_cream_sidebar {
+    display: none
+}
+
+.ocean_cream_button {
+    display: inline-block;
+    padding: 0 16px;
+    background-color: #00b0ff;
+    color: #3e2723;
+    height: 36px;
+    margin: 2mm;
+    line-height: 36px;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.ocean_cream_button:hover {
+    background-color: #2a91d1
+}
+
+#ocean_cream_sidebar[style*='display: block']~article {
+    margin-left: 27%
+}
+
+#comments {
+    display: none
+}

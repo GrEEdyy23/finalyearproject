@@ -1,0 +1,305 @@
+
+/*==================================================
+=            Bootstrap 3 Media Queries             =
+==================================================*/
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+
+}
+
+/*==========================================================*/
+@media (max-width: $break-large) {
+	.header-v1{
+		.header-meta{
+			display: none;
+		}
+	}
+	.header-v3,
+	.header-v4{
+		.header-inner-wrapper{
+			@include flexbox();			
+			@include flex-wrap(wrap);			
+		}
+		.header-meta{			
+			float: none !important;
+			@include flex(0 0 37%);		
+			@include flexbox();
+			@include align-items(center);			
+			@include justify-content(flex-start); 
+    	}
+		.header-logo{
+			height: 94px;
+			@include flex(0 0 26%);
+			@include flexbox();			
+			@include align-items(center);
+			@include justify-content(center);  
+			position: static !important;		
+			float: none !important;
+			margin: 0px 0 !important;			
+			@include transform(translate(0) !important);
+		}
+	}	
+	.header-v4 .navbar-nav > li{
+		padding-right: 30px;
+		> a{
+			padding-top: 36px !important;
+			padding-bottom: 36px !important;
+		}
+	}	
+	.ninzio-header.header-v3 .header-actions, 
+	.ninzio-header.header-v4 .header-actions{		
+		float: none !important;
+		height: 94px;						
+		@include flex(0 0 37%);
+		@include flexbox();
+		@include align-items(center);
+		.header-meta-2{
+			float: none !important;		
+			margin: 0;
+			@include flexbox();
+			@include justify-content(flex-end); 
+			@include flex(0 0 80%);
+		}
+		.header-box-right{
+			float: none !important;	
+			margin: 0;
+			@include flexbox();
+			@include justify-content(flex-end); 
+			@include flex(0 0 20%);				
+		}
+		.search-form{
+			display: inline-block;
+			@include square(40px);
+		}
+		.top-cart{
+			display: inline-block;
+			@include square(40px);
+		}
+	}
+	.header-v4 .navbar-nav.megamenu > li > a{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.product-block.grid .groups-button > div{
+		margin: 0;
+	}
+}
+
+@media (min-width: 992px){
+	.md-clearfix {
+		clear: both;
+	}
+
+}
+@media (min-width: 768px) and (max-width: 991px){
+	.sm-clearfix{
+		clear: both;
+	} 
+}
+@media (max-width:1200px){
+	.edr-course .edr-course__title,
+	.widget-features-box.default .ourservice-heading{
+		font-size: 16px;
+		line-height: 28px;
+	}
+	.banner-countdown-widget{
+		.times{
+			> div{
+				span{
+					font-size: 30px;
+					padding:7px 10px;
+				}
+			}
+		}
+	}
+	.banner-countdown-widget .title{
+		font-size: 20px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1024px){
+	#main-mobile-menu .has-submenu > .sub-menu li > a {
+		text-align: left;
+	}
+	#main-mobile-menu .widget .widget-title, #main-mobile-menu .widget .widgettitle, #main-mobile-menu .widget .widget-heading {
+		margin-top: 15px;
+		text-align: left;
+	}
+}
+@media (max-width: 1024px){
+	#main-mobile-menu .widget .widget-title, #main-mobile-menu .widget .widgettitle, #main-mobile-menu .widget .widget-heading {
+		margin-top: 15px;
+	}
+	#main-mobile-menu .has-submenu > .sub-menu li > a {
+		padding: 18px 0px;
+    	font-size: 11px;
+	}
+	#wrapper-container {
+		overflow-x: hidden;
+	}
+	.hidden-1024 {
+		display: none;
+	}
+	.show-1024 {
+		display: block !important;
+	}
+}
+@media (max-width: $screen-phone){
+	.widget-social.right{
+		text-align: inherit;
+	}
+	.ninzio-footer{
+		.widget-social{
+			margin-top: 15px;
+		}
+	}
+}
+//tabbest(768px)
+@media (max-width: $screen-sm){
+}
+@media (max-width: 767px){
+	#main-mobile-menu .widget .widget-title, #main-mobile-menu .widget .widgettitle, #main-mobile-menu .widget .widget-heading {
+		text-align: center;
+	}
+	.navbar-nav .sub-menu .widget-title:before, .navbar-nav .sub-menu .widgettitle:before{
+		left: 50%;
+		@include translateX(-50%);
+	}
+	.comment-list ul.children > li{
+		@include rtl-padding-left(15px);
+	}
+	// feature
+	.widget-features-box.default .row-item > div{
+		margin-top: ($theme-margin / 2);
+	}
+	// categories course
+	.widget-course-categories.style1 .category-wrapper{
+		margin-bottom: $theme-margin / 2;
+	}
+	.widget-search-form.layout1 .input_search,
+	.widget-search-form.layout1 .inner-select{
+		margin-bottom: $theme-margin / 2;
+	}
+	.banner-countdown-widget {
+		text-align: center;
+		.times{
+			text-align: center;
+		}
+	}
+	.list-events .media > div{
+		margin-bottom: 10px;
+	}
+	.counters {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.counters .title::before{
+		left: 50%;
+		@include translateX(-50%);
+	}
+	.widget-event .widget-description{
+		margin:0;
+	}
+	#back-to-top{
+		bottom: 20px;
+		right: 20px;
+		@include size(40px,40px);
+		line-height: 40px;
+	}
+	// feature
+	.widget-features-box.center .fbox-icon{
+		margin-bottom: 15px;
+	}
+	.widget-features-box.center .feature-box{
+		margin-bottom:20px;
+	}
+	.widget-action.styledefault .action{
+		@include rtl-float-left();
+		margin-bottom: 30px;
+	}
+	.ninzio-breadscrumb .bread-title{
+		font-size: 30px;
+	}
+	// blog
+	.post-grid-v3 .entry-title{
+		font-size: 20px;
+	}	
+}
+@media (max-width: $screen-desktop){
+   //desktop(992px)
+
+}
+@media (max-width: 991px){
+	
+}
+
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width : 320px) {
+	.header-mobile{
+		.header-mobile-top{
+			padding: 10px;	
+		}
+		.logo-mobile-wrapper{
+			max-width: 60%;
+		}
+	} 
+}
+
+@media(max-width:1199px){
+ 	.navbar-nav > li {
+  		@include rtl-padding-right(32px);
+  		&:last-child{
+   			@include rtl-padding-right(0px);
+  		}
+ 	}
+}

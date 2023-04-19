@@ -1,0 +1,22 @@
+a {
+color:#000
+}
+
+article {
+margin:0 auto
+}
+
+div#respond.comment-respond,
+aside,
+#ocean_cream_mobile_menu,
+.navigation.pagination,
+.ocean_cream_button,
+#ocean_cream_mobile_menu_icon,
+.read-more,
+article.tag-sticky-2::before {
+display:none
+}
+
+h1 {
+text-align:center
+}

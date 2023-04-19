@@ -1,0 +1,87 @@
+body#tinymce.wp-editor {
+  margin: 2em 4em;
+  font-size: calc(14px + 0.25vw);
+  line-height: 150%;
+  font-family: "Nimbus Sans", Helvetica, Arial, sans;
+  color: #333;
+  background-color: beige;
+}
+
+a {
+  color: #333
+}
+
+blockquote,
+q{
+background:#EDEDED;
+border:1px solid #ddd;
+border-left:3px solid #008FEA;
+box-shadow:0 3px 15px rgba(0,0,0,.15);
+color:#666;
+padding:1em 1.5em
+}
+
+/* Terminal mode based on highlight.js ocean | "New" BSD */
+code {
+background: #2b303b;
+color:#F0F0F0;
+display:block;
+overflow-x:auto;
+padding:.5em;
+word-wrap:break-word
+}
+
+dd {
+font-weight:700;
+margin:0 0 0 110px;
+padding:0 0 .5em
+}
+/* Definitions by https://www.the-art-of-web.com/css/format-dl/ */
+dl {
+padding:.5em
+}
+
+dl.ocean_cream_author_profile dt {
+clear:none
+}
+
+dl.ocean_cream_author_profile dt:after {
+margin-right:2mm
+}
+
+dt {
+clear:left;
+color:green;
+float:left;
+font-weight:bolder;
+text-align:right;
+width:100px
+}
+
+dt::after {
+content:":"
+}
+
+img {
+box-shadow:
+	0 4px 8px 0 rgba(0,0,0,0.2),
+	0 6px 20px 0 rgba(0,0,0,0.19);
+max-width:100%
+}
+
+table {
+border:2px dotted;
+width:100%
+}
+
+th,
+td {
+padding:8px
+}
+
+thead th {
+color:#FFF;
+padding-bottom:12px;
+padding-top:12px;
+text-align:left
+}
